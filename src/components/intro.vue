@@ -10,7 +10,7 @@
     name: 'intro',
     data() {
       return {
-        title: 'Purizun Sukūru',
+        title: 'Purizun Sukūru', // Actually Kangoku Gakuen
       }
     }
   }
