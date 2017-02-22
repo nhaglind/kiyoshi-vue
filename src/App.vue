@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <extra></extra>
-    <test></test>
+    <intro></intro>
+    <chapters></chapters>
   </div>
 </template>
 
 <script>
-import test from './components/test'
 import extra from './components/extra'
+import intro from './components/intro'
+import chapters from './components/chapters'
 export default {
   name: 'app',
   components: {
-    test,
-    extra
+    extra,
+    intro,
+    chapters
   }
 }
 </script>
