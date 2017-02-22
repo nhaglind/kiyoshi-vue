@@ -1,4 +1,4 @@
-# vue-app
+# kiyoshi-vue
 
 > A Vue.js project to track chapters read in a manga. Currently starting out with dummy data or a raw json import. Future goals will include pulling from an API and then storing changes to a database to retain state after browser exit.
 
