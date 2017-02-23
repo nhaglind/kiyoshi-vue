@@ -17,7 +17,8 @@
     name: 'chapters',
     data() {
       return {
-        chapters: [
+        chapters: [{}]
+        /*
           {
             number: 1,
             title: 'The Three Kingdoms',
@@ -34,6 +35,7 @@
             read: false
           }
         ]
+        */
       }
     },
     computed: {
@@ -42,14 +44,24 @@
       }
     },
     methods: {
+      getchapters: function(){
+
+      },
+      loopChapters: function(){
+
+      }
+    },
+    methods: {
       getChapters: function () {
-        this.$http.get('https://www.mangaeden.com/api/manga/4e70e9f6c092255ef7004336/')
-          .then (response => {
-            this.chapters = response.json();
-          }, response => {
-            console.log("error");
-            // error callback
-        });
+        this.$http.get('http://www.mangaeden.com/api/manga/4e70ea7ac092255ef7006f9c/')
+        .then(response => {
+          this.chapters = [];
+          var ary = response.body.chapters;
+          for(var i = 0; i < ary.length; i++){
+            this.chapters.push({number: ary[i][0], title: ary[i][2]});
+          }
+         },
+        response => {console.log('error lul')});
       }
     }
   }
